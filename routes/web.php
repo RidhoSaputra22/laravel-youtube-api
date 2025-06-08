@@ -16,6 +16,7 @@ Route::apiResource('video', VideoController::class);
 
 
 Route::get('file/video/{fileName}', [FileController::class, 'fileVideo']);
+Route::get('file/video/thumbnail/{fileName}', [FileController::class, 'fileThumbnail']);
 Route::get('file/user/{fileName}', [FileController::class, 'fileUser']);
 
 Route::post('auth/login', [AuthController::class, 'login']);

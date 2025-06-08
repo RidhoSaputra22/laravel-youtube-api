@@ -18,7 +18,8 @@ class VideoSeeder extends Seeder
         $datas = [
             [
                 'title' => 'Wild breakthrough on Math after 56 years... [Exclusive]',
-                'thumbnailUrl' => config('app.url') . '/file/video/1.png',
+                'thumbnailUrl' => config('app.url') . '/file/video/thumbnail/1.png',
+                'videoUrl' => config('app.url') . '/file/video/1.mp4',
                 'datePosted' => '2025-05-15',
                 'views' => '46K',
                 'likes' => '1,7 rb',
@@ -27,7 +28,8 @@ class VideoSeeder extends Seeder
             ],
             [
                 'title' => 'lain sings u duvet',
-                'thumbnailUrl' => config('app.url') . '/file/video/2.png',
+                'thumbnailUrl' => config('app.url') . '/file/video/thumbnail/2.png',
+                'videoUrl' => config('app.url') . '/file/video/2.mp4',
                 'datePosted' => '2023-05-15',
                 'views' => '1.1M',
                 'likes' => '',
@@ -36,7 +38,8 @@ class VideoSeeder extends Seeder
             ],
             [
                 'title' => 'New maths discoveries! All announced at once!',
-                'thumbnailUrl' => config('app.url') . '/file/video/3.png',
+                'thumbnailUrl' => config('app.url') . '/file/video/thumbnail/3.png',
+                'videoUrl' => config('app.url') . '/file/video/3.mp4',
                 'datePosted' => '2025-05-15',
                 'views' => '87K',
                 'likes' => '1,5 jt',
@@ -45,7 +48,8 @@ class VideoSeeder extends Seeder
             ],
             [
                 'title' => 'Google\'s New "AlphaEvolve" SHOCKING Ability...',
-                'thumbnailUrl' => config('app.url') . '/file/video/4.png',
+                'thumbnailUrl' => config('app.url') . '/file/video/thumbnail/4.png',
+                'videoUrl' => config('app.url') . '/file/video/4.mp4',
                 'datePosted' => '2025-05-15',
                 'views' => '50K',
                 'likes' => '2,34 rb',
@@ -54,7 +58,8 @@ class VideoSeeder extends Seeder
             ],
             [
                 'title' => 'Lain sings u duvet - Juliana Chahayed\'s Cover of Bôa - Duvet',
-                'thumbnailUrl' => config('app.url') . '/file/video/5.png',
+                'thumbnailUrl' => config('app.url') . '/file/video/thumbnail/5.png',
+                'videoUrl' => config('app.url') . '/file/video/5.mp4',
                 'datePosted' => '2023-05-15',
                 'views' => '1.6M',
                 'likes' => '',
@@ -63,7 +68,8 @@ class VideoSeeder extends Seeder
             ],
             [
                 'title' => 'New "Absolute Zero" Model Learns with NO DATA',
-                'thumbnailUrl' => config('app.url') . '/file/video/6.png',
+                'thumbnailUrl' => config('app.url') . '/file/video/thumbnail/6.png',
+                'videoUrl' => config('app.url') . '/file/video/6.mp4',
                 'datePosted' => '2025-05-09',
                 'views' => '60K',
                 'likes' => '',

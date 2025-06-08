@@ -36,12 +36,9 @@ class VideoController extends Controller
         //
         $validator = Validator::make($request->all(), [
             'title' => 'required',
-            // 'thumbnailUrl' => 'required',
-            // 'datePosted' => 'required|date',
-            // 'views' => 'required',
-            // 'likes' => 'required',
+            'thumbnail' => 'required',
             'description' => 'required',
-            // 'user_id' => 'required',
+            'user_id' => 'required',
             'file' => 'required',
         ]);
 
@@ -51,17 +48,23 @@ class VideoController extends Controller
 
         if ($request->hasFile('file')) {
             Storage::disk('public')->putFile('video', $request->file('file'));
-            $thumbnailUrl = $request->file('file')->hashName();
+            $videoUrl = $request->file('file')->hashName();
+        }
+
+        if ($request->hasFile('thumbnail')) {
+            Storage::disk('public')->putFile('video/thumbnail', $request->file('thumbnail'));
+            $thumbnailUrl = $request->file('thumbnail')->hashName();
         }
 
         $video = Video::create([
             'title' => $request->title,
-            'thumbnailUrl' => config('app.url') . '/file/video/' . $thumbnailUrl,
+            'videoUrl' => config('app.url') . '/file/video/' . $videoUrl,
+            'thumbnailUrl' => config('app.url') . '/file/video/thumbnail/' . $thumbnailUrl,
             'datePosted' => now(),
             'views' => '',
             'likes' => '',
             'description' => $request->description,
-            'user_id' => 1,
+            'user_id' => $request->user_id,
         ]);
         return response()->json([
             'status' => 200,

@@ -21,6 +21,7 @@ class VideoFactory extends Factory
             //
             'title' => fake()->sentence(),
             'thumbnailUrl' => 'video/1.png',
+            'videoUrl' => 'video/1.png',
             'datePosted' => fake()->date(),
             'views' => fake()->randomNumber(),
             'likes' => fake()->randomNumber(),

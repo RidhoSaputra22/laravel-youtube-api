@@ -22,6 +22,19 @@ class FileController extends Controller
             'Content-Type' => mime_content_type($path)
         ]);
     }
+    public function fileThumbnail($fileName)
+    {
+        $path = storage_path('app/public/video/thumbnail/' . $fileName);
+
+        if (!file_exists($path)) {
+            abort(404);
+        }
+
+        return response()->file($path, [
+            'Access-Control-Allow-Origin' => '*',
+            'Content-Type' => mime_content_type($path)
+        ]);
+    }
     public function fileUser($fileName)
     {
         $path = storage_path('app/public/user/' . $fileName);

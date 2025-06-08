@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('videos', function (Blueprint $table) {
             $table->id()->primary()->index();
             $table->string('title');
-            $table->string('thumbnailUrl')->nullable();
+            $table->text('thumbnailUrl');
+            $table->text('videoUrl');
             $table->date('datePosted');
             $table->string('views')->nullable();
             $table->string('likes')->nullable();
